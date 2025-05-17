@@ -20,14 +20,6 @@ Apache Icebergはオープンソースのテーブルフォーマットで、大
 - AWS 認証情報が設定されており、Glue.DynamoDB.S3の作成変更削除ロールが付与されている事
 - 基本的なPython、Sparkの知識
 
-## 追加コンテンツ
-
-Apache Iceberg 実践ガイド完了後、Qlik Cloud Analytics を想定した構造化データの活用を行うシナリオを設けています。追加コンテンツでは、データフロー/Qlik Load Script および Qlik Answers を使用し、非構造化データと構造化データを統合RAG を作成します。
-
-- Qlik Cloud Analytics (Qlik Answers) が利用可能であること
-- Qlik Cloud Analytics へ本編で使用するS3接続の作成が可能であること
-
-
 ## 環境構築
 
 AWS Glue 5.0をベースとしたDockerイメージを使用して、ローカル開発環境をセットアップします。
@@ -70,7 +62,6 @@ http://localhost:8888
 os.environ['AWS_ACCESS_KEY_ID'] = 'XXXXXXXXXXXXXXX'
 os.environ['AWS_SECRET_ACCESS_KEY'] = 'XXXXXXXXXXXXXXX'
 os.environ['AWS_DEFAULT_REGION'] = 'XXXXXXXXXXXXXXX'
-
 s3://xxxxxxxxxxxxxxxxx
 
 ## Iceberg テーブルの基本操作
@@ -284,8 +275,6 @@ ORDER BY feedback_date
 
 ### カテゴリごとのポジティブ・ネガティブ比率の推移
 フィードバックカテゴリ別の評価傾向を分析します：
-
-# 追加コンテンツ
 
 ### データのエクスポートと統合
 Icebergテーブルからデータをエクスポートして、他のシステムと統合することができます。
